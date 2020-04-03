@@ -17,13 +17,17 @@
           })
         }}
         <br />
-        *{{ $t('都営地下鉄4路線の自動改札出場数') }}
-        <br />
-        {{
-          $t(
-            '（注）速報値として公開するものであり、後日確定データとして修正される場合あり'
-          )
-        }}
+        * {{ $t('都営地下鉄4路線の自動改札出場数') }}
+
+        <ul class="metro-note-wrapper">
+          <li>
+            {{
+              $t(
+                '（注）速報値として公開するものであり、後日確定データとして修正される場合あり'
+              )
+            }}
+          </li>
+        </ul>
       </template>
     </metro-bar-chart>
   </v-col>
@@ -95,3 +99,11 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.metro-note-wrapper {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+</style>
