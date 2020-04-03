@@ -37,7 +37,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import { TranslateResult } from 'vue-i18n'
+import MetaInfo from 'vue-meta'
 import CovidIcon from '@/static/covid.svg'
 import PrinterButton from '@/components/PrinterButton.vue'
 import FlowPc from '@/components/flow/FlowPc.vue'
@@ -52,12 +52,9 @@ export default Vue.extend({
     FlowPc,
     FlowSp
   },
-  head(): any {
-    const title: TranslateResult = this.$t(
-      '新型コロナウイルス感染症が心配なときに'
-    )
+  head(): MetaInfo {
     return {
-      title
+      title: this.$t('新型コロナウイルス感染症が心配なときに') as string
     }
   }
 })

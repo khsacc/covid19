@@ -15,11 +15,12 @@
   </v-col>
 </template>
 
-<script>
+<script lang="ts">
+import Vue from 'vue'
 import ChiyodaData from '@/data/13101_daily_visitors.json'
 import VisitorsBarChart from '@/components/VisitorsBarChart.vue'
 
-export default {
+export default Vue.extend({
   components: {
     VisitorsBarChart
   },
@@ -28,5 +29,5 @@ export default {
       chartData: ChiyodaData
     }
   }
-}
+})
 </script>

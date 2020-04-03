@@ -15,11 +15,12 @@
   </v-col>
 </template>
 
-<script>
-import agencyData from '@/data/agency.json'
+<script lang="ts">
+import Vue from 'vue'
+import _agencyData from '@/data/agency.json'
 import AgencyBarChart from '@/components/AgencyBarChart.vue'
 
-export default {
+export default Vue.extend({
   components: {
     AgencyBarChart
   },
@@ -29,7 +30,7 @@ export default {
       this.$t('第二庁舎計'),
       this.$t('議事堂計')
     ]
-    agencyData.datasets.map(dataset => {
+    const agencyData = _agencyData.datasets.map(dataset => {
       dataset.label = this.$t(dataset.label)
     })
     return {
@@ -37,5 +38,5 @@ export default {
       agencies
     }
   }
-}
+})
 </script>

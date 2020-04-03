@@ -2,17 +2,21 @@
   <flow-pc />
 </template>
 
-<script>
+<script lang="ts">
+import Vue from 'vue'
+import { MetaInfo } from 'vue-meta'
 import FlowPc from '@/components/flow/FlowPc.vue'
-export default {
+export default Vue.extend({
   components: {
     FlowPc
   },
   layout: 'print',
-  head() {
+  head(): MetaInfo {
     return {
-      title: this.$t('新型コロナウイルス感染症にかかる相談窓口について')
+      title: this.$t(
+        '新型コロナウイルス感染症にかかる相談窓口について'
+      ) as string
     }
   }
-}
+})
 </script>

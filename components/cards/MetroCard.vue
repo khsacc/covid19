@@ -30,11 +30,12 @@
 </template>
 
 <script>
+import Vue from 'vue'
 import Data from '@/data/data.json'
 import MetroData from '@/data/metro.json'
 import MetroBarChart from '@/components/MetroBarChart.vue'
 
-export default {
+export default Vue.extend({
   components: {
     MetroBarChart
   },
@@ -93,5 +94,5 @@ export default {
       return label
     }
   }
-}
+})
 </script>

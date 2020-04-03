@@ -13,13 +13,14 @@
   </v-col>
 </template>
 
-<script>
+<script lang="ts">
+import Vue from 'vue'
 import Data from '@/data/data.json'
 import formatConfirmedCases from '@/utils/formatConfirmedCases'
 import ConfirmedCasesCard from '@/components/ConfirmedCasesCard.vue'
 import ConfirmedCasesTable from '@/components/ConfirmedCasesTable.vue'
 
-export default {
+export default Vue.extend({
   components: {
     ConfirmedCasesCard,
     ConfirmedCasesTable
@@ -34,5 +35,5 @@ export default {
     }
     return data
   }
-}
+})
 </script>

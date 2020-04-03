@@ -13,13 +13,14 @@
   </v-col>
 </template>
 
-<script>
+<script lang="ts">
+import Vue from 'vue'
 import Data from '@/data/data.json'
 import formatGraph from '@/utils/formatGraph'
 import formatTable from '@/utils/formatTable'
 import DataTable from '@/components/DataTable.vue'
 
-export default {
+export default Vue.extend({
   components: {
     DataTable
   },
@@ -67,5 +68,5 @@ export default {
     }
     return data
   }
-}
+})
 </script>

@@ -12,12 +12,13 @@
   </v-col>
 </template>
 
-<script>
+<script lang="ts">
+import Vue from 'vue'
 import Data from '@/data/data.json'
 import formatGraph from '@/utils/formatGraph'
 import TimeBarChart from '@/components/TimeBarChart.vue'
 
-export default {
+export default Vue.extend({
   components: {
     TimeBarChart
   },
@@ -31,5 +32,5 @@ export default {
     }
     return data
   }
-}
+})
 </script>

@@ -15,11 +15,12 @@
   </v-col>
 </template>
 
-<script>
+<script lang="ts">
+import Vue from 'vue'
 import ShinjukuData from '@/data/13104_daily_visitors.json'
 import VisitorsBarChart from '@/components/VisitorsBarChart.vue'
 
-export default {
+export default Vue.extend({
   components: {
     VisitorsBarChart
   },
@@ -28,5 +29,5 @@ export default {
       chartData: ShinjukuData
     }
   }
-}
+})
 </script>

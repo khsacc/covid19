@@ -20,12 +20,13 @@
   </v-col>
 </template>
 
-<script>
+<script lang="ts">
+import Vue from 'vue'
 import MapCard from '@/components/MapCard.vue'
 
-export default {
+export default Vue.extend({
   components: {
     MapCard
   }
-}
+})
 </script>
